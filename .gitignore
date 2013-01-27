@@ -1,5 +1,6 @@
 */config/config.php
 */config/database.php
+*/config/pubsubhubbub.php
 
 */logs/log-*.php
 */logs/!index.html
