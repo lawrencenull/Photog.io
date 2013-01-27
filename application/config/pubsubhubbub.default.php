@@ -10,9 +10,7 @@ $config['hubs'] = array(
 	// 'http://example.com/hub',
 );
 
-// $config['secret'] = '';
-// $config['secret'] = 'jfhaldjkfgbvaklugjklsahflakj';
-$config['secret'] = '48q6DZ9V24h6cyUKig06fWw0sg12aq6x';
+$config['secret'] = '';
 
 /* End of file pubsubhubbub.php */
 /* Location: ./application/config/pubsubhubbub.php */
