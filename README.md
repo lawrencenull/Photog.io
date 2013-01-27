@@ -1,14 +1,15 @@
 Photog.io
 =========
 
-__Photog.io__ is an open-source, self-hosted image sharing platform. Users on your Photog.io site can follow users on any other Photog.io site thanks to the [PubSubHubbub](https://code.google.com/p/pubsubhubbub/) protocol.
+__Photog.io__ is an open-source, self-hosted image sharing platform. Users on your Photog.io site can follow users on any other Photog.io site via the [PubSubHubbub](https://code.google.com/p/pubsubhubbub/) protocol.
 
 Photog.io is made possible thanks to the following technologies:
-	* [CodeIgniter PHP Framework](http://CodeIgniter.com/)
-	* [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
-	* [jQuery](http://jquery.com/)
-	* [Paul Irish's Infinite Scroll](https://github.com/paulirish/infinite-scroll)
-	* Various HTML5 enhancements such as [getUserMedia()](http://dev.w3.org/2011/webrtc/editor/getusermedia.html)
+
+* [CodeIgniter PHP Framework](http://CodeIgniter.com/)
+* [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
+* [jQuery](http://jquery.com/)
+* [Paul Irish's Infinite Scroll](https://github.com/paulirish/infinite-scroll)
+* Various HTML5 enhancements such as [getUserMedia()](http://dev.w3.org/2011/webrtc/editor/getusermedia.html)
 
 Photog.io is very much a work-in-progress, so many features are broken or nonexistent at this time. If you find a bug please file a report or submit a patch. Pull requests are greatly appreciated at this early stage of development! :)
 
@@ -43,6 +44,14 @@ Where Photog.io differs
 	* Make the most of every available space without making it feel cramped
 	* Don't give users options they don't want, care about, or need
 
+Installation
+============
+One of the main goals of Photog.io is to be as painless to install as possible. An installation wizard is planned for the future, but for now the manual installation process is explained in the following steps:
 
+1. [Download Photog.io](https://github.com/JoeAnzalone/Photog.io/archive/master.zip), unzip it, and upload it to your server
+2. Make sure you have a MySQL server set up and gather your host name, username, and password
+3. Import "photog.io.sql" into your database
+4. Navigate to /application/config and remove ".default" from the filenames of config.default.php, database.default.php, and pubsubhubbub.default.php
+5. Edit each config file to reflect your server environment and personal preferences
 
 Additional notes are available via [Google Docs](https://docs.google.com/a/shmit.com/document/d/1QfLpcVuVoN8Ky1cX7J6RrsHwse4cC8vZcPliaAqbemM/edit)
