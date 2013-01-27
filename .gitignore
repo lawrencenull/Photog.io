@@ -1,0 +1,11 @@
+*/config/config.php
+*/config/database.php
+
+*/logs/log-*.php
+*/logs/!index.html
+
+*/cache/*
+*/cache/!index.html
+
+.DS_Store
+thumbs.db
