@@ -44,6 +44,11 @@ Where Photog.io differs
 	* Make the most of every available space without making it feel cramped
 	* Don't give users options they don't want, care about, or need
 
+Requirements
+============
+* PHP 5.1.6 (or newer)
+* MySQL 5.1 (or newer)
+
 Installation
 ============
 One of the main goals of Photog.io is to be as painless to install as possible. An installation wizard is planned for the future, but for now the manual installation process is explained in the following steps:
