@@ -93,7 +93,7 @@ class Local_subscription extends DataMapper {
 
 		foreach ($subscriptions as $i => &$subscription) {
 			$subscription->name = $subscription->username;
-			$subscription->subscribee_url = base_url($subscription->username);
+			$subscription->subscribee_url = site_url($subscription->username);
 		}
 		
 		return $subscriptions;
