@@ -4,10 +4,7 @@ class Subscription extends MY_Controller {
 
 	public function __construct(){
 		parent::__construct();
-		// $this->load->model('subscription');
 		$this->data['title'] = 'Subscriptions';
-		// $this->load->model('local_subscription');
-		// $this->load->model('remote_subscription');
 		require_auth();
 	}
 
@@ -29,22 +26,6 @@ class Subscription extends MY_Controller {
         $this->load->view('footer');
 	}
 
-	public function save() {
-		if ( $_POST ) {
-			$options = $this->input->post('options', true);
-			$i = 0;
-			foreach ($options as $key => $value) {
-				$options_numerical[$i]['key'] = $key;
-				$options_numerical[$i]['value'] = $value;
-				$i++;
-			}
-
-			$this->site_option->update_options( $options_numerical );
-        	$current_url = $this->uri->uri_string();
-			redirect($current_url);
-		}
-	}
-
 	public function follow( $user_url = '' ) {
 
 		if ( $_POST ) {
@@ -55,7 +36,7 @@ class Subscription extends MY_Controller {
 
 			$this->session->set_flashdata( $result['message_type'], $result['message_body'] );
 
-			// This should actually redirect them back to where they were, not necessrily 'follow'
+			// This should actually redirect them back to where they were, not necessrily the home page
 			redirect();
 		}
 
@@ -75,17 +56,11 @@ class Subscription extends MY_Controller {
 
 			$this->session->set_flashdata( $result['message_type'], $result['message_body'] );
 
-			// This should actually redirect them back to where they were, not necessrily 'follow'
+			// This should actually redirect them back to where they were, not necessrily the home page
 			redirect();
 		}
 
-		/*$this->data['user_url'] = $user_url;
-		$this->load->view('header', $this->data);
-        $this->load->view('subscription/follow', $this->data);
-        $this->load->view('footer');*/
 	}
-
-
 
 	public function show_followers() {
 		$this->data['title'] = 'Followers';
@@ -101,8 +76,4 @@ class Subscription extends MY_Controller {
 
 	}
 
-
-	public function remove( $id ) {
-
-	}
 }
