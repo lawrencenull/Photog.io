@@ -4,7 +4,6 @@ class Invite extends MY_Controller {
 
 	public function __construct() {
 		parent::__construct();
-		$this->load->model('site_option');
 		$this->data['title'] = 'Invites';
 	}
 
